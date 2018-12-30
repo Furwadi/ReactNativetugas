@@ -30,7 +30,9 @@ export default class extends Component {
             this.state = {
                 ImageSlider : [
                     require('../../images/bukalapak/bukalapak.jpg'),
-                    require('../../images/bukalapak/bukalapak1.jpg')
+                    require('../../images/bukalapak/bukalapak1.jpg'),
+                    require('../../images/bukalapak/bukalapak2.jpg'),
+                    require('../../images/bukalapak/bukalapak4.jpg')
                 ]
             
         }

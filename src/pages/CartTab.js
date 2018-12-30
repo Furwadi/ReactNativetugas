@@ -8,31 +8,31 @@ export default class CartTab extends Component {
     tabBarIcon: ({tintColor}) => {
       return <Icon  name="cart" style={{ color: tintColor }}/>
     }
-}
+  }
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      segment: 1
+    }
+  }
 
   render() {
     return (
       <Container style={{ backgroundColor: '#eeeeee' }}>
         <Header hasSegment>
-          <Left>
-            <Button transparent>
-              <Icon name="arrow-back" />
-            </Button>
-          </Left>
           <Body>
             <Text style={styles.textHeader}>Keranjang Belanja</Text>
           </Body>
-          <Right>
-          </Right>
         </Header>
         <Segment>
-          <Button first>
+          <Button first active={this.state.segment === 1} onPress={() => this.setState({ segment: 1 })}>
             <Text>Pembelian</Text>
           </Button>
-          <Button>
+          <Button active={this.state.segment === 2}  onPress={() => this.setState({ segment: 2 })}>
             <Text>Pembayaran</Text>
           </Button>
-          <Button >
+          <Button last active={this.state.segment === 3}  onPress={() => this.setState({ segment: 3 })}>
             <Text>Transaksi Berhasil</Text>
           </Button>
         </Segment>
